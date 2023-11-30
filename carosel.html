@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carousal</title>
+  </head>
+  <style>
+    /*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+    /* Main Color #087f5b  */
+    /* Grey Color #343a40 */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      /* font-family: "inter", sans-serif;
+      line-height: 1; */
+      /* color: #343a40; */
+      /* border-bottom: 8px solid #087f5b; */
+    }
+    img {
+      height: 200px;
+      border-radius: 5px;
+      transform: scale(1.5);
+      /* padding-left: 20px; */
+      box-shadow: 0 12px 24px rgb(0, 0, 0, 0.25);
+      margin-left: 42px;
+    }
+    .carousel {
+      width: 800px;
+      margin: 100px auto;
+      background-color: #087f5b;
+      color: white;
+      padding: 32px;
+      display: flex;
+      /* align-items: center; */
+      gap: 86px;
+      position: relative;
+    }
+    /* .testimonial{
+    } */
+    .btn {
+      background-color: #fff;
+      border: none;
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 24px rgb(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+    .btn--left {
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .btn--right {
+      right: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+    }
+    .btn-icon {
+      height: 24px;
+      width: 24px;
+      stroke: #087f5b;
+    }
+    .dots {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 25px);
+      display: flex;
+      gap: 12px;
+    }
+    .dot {
+      height: 12px;
+      width: 12px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 2px solid #087f5b;
+    }
+    .dot--fill {
+      background-color: #087f5b;
+    }
+    .testimonial-text {
+      font-size: 18px;
+      font-weight: 500px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      color: #e6fcf5;
+    }
+    .testimonial-job {
+      font-size: 12px;
+      color: #c3fae8;
+    }
+    .testimonial-author {
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #c3fae8;
+    }
+  </style>
+  <body>
+    <div class="carousel">
+      <img src="maria.jpg" />
+      <blockquote class="testimonail">
+        <p class="testimonial-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi esse
+          perspiciatis quos, praesentium assumenda cupiditate? Numquam est atque
+          porro pariatur error iure, modi accusamus dolorum iste soluta
+          quibusdam? Sunt, pariatur.
+        </p>
+        <p class="testimonial-author">Maria Rimsha Madiha</p>
+        <p class="testimonial-job">senior product manager at EDP commercial</p>
+      </blockquote>
+      <button class="btn btn--left">
+        <svg
+          class="btn-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--right">
+        <svg
+          class="btn-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot dot--fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>
